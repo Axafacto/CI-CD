@@ -3,7 +3,11 @@ const routes = [
         method : 'GET',
         path : '/',
         handler: (request, h) => {
-            return 'Homepage versi B dari Developer B';
+<<<<<<< HEAD
+            return 'Homepage versi gabungan oleh A dan B';
+=======
+            
+>>>>>>> 748546981cab7aa10f9c7c5fe22e87c29293a776
         },
     },
     {
