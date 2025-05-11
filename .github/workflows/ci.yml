@@ -18,6 +18,6 @@ jobs:
     - name: Install Dependencies
       run: npm install
 
-    - name: Run the Program
-      run: node server.js & sleep 5 && curl -i http://localhost:5000
-git add .github/workflows/ci.yml
+    - name: Run Server and Test
+      run: npm run ci
+
