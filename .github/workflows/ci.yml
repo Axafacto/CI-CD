@@ -1,11 +1,23 @@
-name: CI Pipeline
+name: Hapi.js CI Pipeline
 
 on: [push, pull_request]
 
 jobs:
-  build
+  build:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout Repository
-        uses: actions/checkout@v3
+    - name: Checkout Repository
+      uses: actions/checkout@v3
+
+    - name: Setup Node.js
+      uses: actions/setup-node@v3
+      with:
+        node-version: '18'
+
+    - name: Install Dependencies
+      run: npm install
+
+    - name: Run the Program
+      run: node server.js & sleep 5 && curl -i http://localhost:5000
+git add .github/workflows/ci.yml
